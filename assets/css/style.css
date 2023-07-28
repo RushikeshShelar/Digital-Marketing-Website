@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+/* Variables Declaration */
+:root {
+    --bg-color: #00abf0;
+    --second-bg-color: #112e42;
+    --text-color: #f3f1f6;
+    --main-color: #8E43F0;
+    --second-text-color: #150e1f;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/* Setting Background Color */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    width: 100%;
+    padding: 2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header.sticky {
+    background-color: var(--bg-color)
+}
+
+.left{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.7rem;
+    width: 30%;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#name{
+    margin-left: 1rem;
+}
+
+.logo img{
+    width: 20%;
+    border-radius: 50%;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+.navbar a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0 1rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2.5rem;
+}
+
+.right .input{
+    width: 60%;
+    padding-right: 2rem;
+
+}
+
+/* Buttons */
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 4.5em;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16.5rem;
+    height: 100%;
+    padding: 0.5 0.5rem;
+    background-color: var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--text-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.btn-box .btn:hover {
+    color: var(--second-text-color);
+    background-color: #ededed;
+}
