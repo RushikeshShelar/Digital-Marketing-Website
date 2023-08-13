@@ -45,13 +45,13 @@ header {
     background-color: var(--bg-color)
 }
 
-.left{
+.left {
     display: flex;
     /* justify-content: center; */
     align-items: center;
 }
 
-.logo{
+.logo {
     font-size: 1.7rem;
     width: 30%;
 }
@@ -63,16 +63,16 @@ header {
 
 }
 
-#name{
+#name {
     margin-left: 1rem;
 }
 
-.logo img{
+.logo img {
     width: 20%;
     border-radius: 50%;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
     font-size: 2rem;
     color: var(--text-color);
@@ -88,7 +88,7 @@ header {
 }
 
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     font-size: 1.3rem;
     color: var(--text-color);
@@ -96,19 +96,20 @@ header {
     padding: 0 1rem;
 }
 
+
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
 }
 
-.right{
+.right {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 2.5rem;
 }
 
-.right .input{
+.right .input {
     width: 60%;
     padding-right: 2rem;
 
@@ -119,7 +120,7 @@ header {
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 4.5em;
+    height: 4em;
 }
 
 .btn-box .btn {
@@ -146,13 +147,86 @@ header {
     background-color: #ededed;
 }
 
-header::before{
+header::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: transparent url('/assets/images/img/background.jpeg') no-repeat center center/cover ;
+    background: transparent url('/assets/images/img/background.jpeg') no-repeat center center/cover;
     z-index: -1;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background-color: var(--bg-color);
+    }
+
+    header::before{
+        background: none;
+        background-color: #150e1f;
+    }
+    #head-btn {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        right: 8%;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 15%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background-color: rgba(21,14,31,.5);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+
+    .navbar.active {
+        transition-delay: 0s;
+        left: 0;
+    }
+
+
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(21,14,31,.1);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25s;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(0);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
 }
