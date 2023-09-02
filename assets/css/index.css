@@ -149,7 +149,7 @@ header .container .btn-box .btn {
     font-weight: 500;
 }
 
-
+/* Horizontal Line */
 .hr-1{
     display: block;
     position: relative;
@@ -170,6 +170,7 @@ header .container .btn-box .btn {
     padding-block-start: 1rem;
     font-size: 2rem;
 }
+
 /* Increment Counter */
 .counter{
     text-align: center;
