@@ -40,6 +40,50 @@ body {
 } */
 
 /* Header */
+/* #menu{
+    display: none;
+} */
+
+.menu{
+    width: 30px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.menu.active{
+    width: 30px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu span{
+    width: 100%;
+    margin: 2px;
+    border: 2px solid white;
+}
+
+.menu.active .mid{
+    display: none;
+}
+
+.menu.active .start{
+    transform: translate(0px,5px) rotate(45deg);
+}
+
+.menu.active .end{
+    transform: translate(0,-5px) rotate(-45deg);
+}
+
+
+
+
 .header::before {
     content: '';
     background-image: url('../img/background.png');
@@ -97,9 +141,9 @@ header .container {
     margin-right: 1.6rem;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
     color: var(--text-main-color);
-    transition: .5s;
 }
 
 
@@ -127,29 +171,34 @@ header .container .btnx-box .btnx {
     overflow: hidden;
 }
 
-/* header .container .btn-box .btn::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: transparent;
-    z-index: -100;
-    transition: 0.5s;
-    overflow: hidden;
-
-}
-
-header .container .btn-box a:hover::before{
-    width: 100%;
-    color: white;
-    background-color: var(--text-main-color);
-
-} */
-
 
 /* Main-Home Section */
+.main .home-content .btnx-box1{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .home-content .btnx-box1 .btn1{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17.3rem;
+    height: 100%;
+    padding: .8rem 1.4rem;
+    border-radius: 1.6rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--text-main-color);
+    z-index: 1;
+    border: 2px solid var(--text-main-color);
+    overflow: hidden;
+    display: none;
+}
+
+
 #main {
     height: 80vh;
 }
@@ -234,8 +283,8 @@ header .container .btn-box a:hover::before{
 .services .services-title {
     text-align: center;
     position: relative;
-    padding-bottom: 14px;
-    margin-bottom: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 700;
     font-size: 32px;
     text-transform: capitalize;
@@ -287,6 +336,7 @@ header .container .btn-box a:hover::before{
     overflow: hidden;
     text-align: center;
     opacity: 0.8;
+    
 }
 
 .services .services-col .services-card .content{
@@ -299,15 +349,20 @@ header .container .btn-box a:hover::before{
     margin-bottom: 10px;
     width: 70px;
     height: 60px;
-    background-color: #ff4500;
     border-radius: 2px;
     line-height: 85px;
     text-align: center;
-    color: #fff;
-    font-size: 10px;
     transition: all 0.5s;
 }
 
+.services .services-col .services-card .content .icon img{
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.services .services-col .services-card:hover .content .icon img{
+    border-radius: 50%;
+}
 .services .services-col .services-card:hover .icon{
     background-color: #fff;
     color: #000;
@@ -326,6 +381,7 @@ header .container .btn-box a:hover::before{
 .services .services-col .services-card .content .description{
     margin-bottom: 20px;
     letter-spacing: 1px;
+    text-align: justify;
     font-size: 14px;
     font-weight: 500;
     color: #838383;
@@ -336,6 +392,7 @@ header .container .btn-box a:hover::before{
 }
 
 .services .services-col .services-card:hover .description{
+    
     color: #fff;
 }
 
@@ -582,3 +639,5 @@ footer .developer a{
     text-decoration: none;
     color: gray;
 }
+
+
