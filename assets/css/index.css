@@ -113,17 +113,16 @@ header .container {
 h1{
     font-size: 4rem;
     font-weight: 800;
-    
+
 }
+
 .logo {
-    font-size: 4rem;
-    font-weight: 800;
-    width: 30%;
+    
+    width: 30%; 
 
 }
 
-
-.logo a {
+.logo h1 a {
     text-decoration: none;
     color: var(--text-main-color);
     cursor: default;
