@@ -44,7 +44,7 @@ body {
     display: none;
 } */
 
-.menu{
+.menu {
     width: 30px;
     padding-right: 5px;
     display: flex;
@@ -54,7 +54,7 @@ body {
     display: none;
 }
 
-.menu.active{
+.menu.active {
     width: 30px;
     padding-right: 5px;
     display: flex;
@@ -63,22 +63,22 @@ body {
     flex-direction: column;
 }
 
-.menu span{
+.menu span {
     width: 100%;
     margin: 2px;
     border: 2px solid white;
 }
 
-.menu.active .mid{
+.menu.active .mid {
     display: none;
 }
 
-.menu.active .start{
-    transform: translate(0px,5px) rotate(45deg);
+.menu.active .start {
+    transform: translate(0px, 5px) rotate(45deg);
 }
 
-.menu.active .end{
-    transform: translate(0,-5px) rotate(-45deg);
+.menu.active .end {
+    transform: translate(0, -5px) rotate(-45deg);
 }
 
 
@@ -110,16 +110,17 @@ header .container {
 }
 
 /* ADZEENY LOGO */
-h1{
-    font-size: 4rem;
-    font-weight: 800;
+
+
+.logo {
+
+    width: 30%;
 
 }
 
-.logo {
-    
-    width: 30%; 
-
+.logo h1 {
+    font-size: 4rem;
+    font-weight: 800;
 }
 
 .logo h1 a {
@@ -177,13 +178,13 @@ header .container .btnx-box .btnx {
 
 
 /* Main-Home Section */
-.main .home-content .btnx-box1{
+.main .home-content .btnx-box1 {
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-.main .home-content .btnx-box1 .btn1{
+.main .home-content .btnx-box1 .btn1 {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -294,7 +295,7 @@ header .container .btnx-box .btnx {
     text-transform: capitalize;
 }
 
-.services .services-title::before{
+.services .services-title::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -305,7 +306,7 @@ header .container .btnx-box .btnx {
     transform: translateX(-50%);
 }
 
-.services .services-title::after{
+.services .services-title::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -316,7 +317,7 @@ header .container .btnx-box .btnx {
     transform: translateX(-50%);
 }
 
-.services .services-desc{
+.services .services-desc {
     letter-spacing: 1px;
     font-size: 16px;
     color: var(--text-color);
@@ -325,12 +326,12 @@ header .container .btnx-box .btnx {
 
 }
 
-.services .services-col{
+.services .services-col {
     max-width: 32%;
     padding: 0 10px;
 }
 
-.services .services-col .services-card{
+.services .services-col .services-card {
     position: relative;
     margin-top: 15px;
     background-color: transparent;
@@ -340,15 +341,15 @@ header .container .btnx-box .btnx {
     overflow: hidden;
     text-align: center;
     opacity: 0.8;
-    
+
 }
 
-.services .services-col .services-card .content{
+.services .services-col .services-card .content {
     position: relative;
     z-index: 1;
 }
 
-.services .services-col .services-card .content .icon{
+.services .services-col .services-card .content .icon {
     display: inline-block;
     margin-bottom: 10px;
     width: 70px;
@@ -359,22 +360,23 @@ header .container .btnx-box .btnx {
     transition: all 0.5s;
 }
 
-.services .services-col .services-card .content .icon img{
+.services .services-col .services-card .content .icon img {
     width: 100%;
     transition: all 0.5s;
 }
 
-.services .services-col .services-card:hover .content .icon img{
+.services .services-col .services-card:hover .content .icon img {
     border-radius: 50%;
 }
-.services .services-col .services-card:hover .icon{
+
+.services .services-col .services-card:hover .icon {
     background-color: #fff;
     color: #000;
     border-radius: 50%;
     transition: all 0.5s;
 }
 
-.services .services-col .services-card .content .title{
+.services .services-col .services-card .content .title {
     margin: 7px 0;
     font-weight: 700;
     font-size: 23px;
@@ -382,7 +384,7 @@ header .container .btnx-box .btnx {
     transition: color 0.3s;
 }
 
-.services .services-col .services-card .content .description{
+.services .services-col .services-card .content .description {
     margin-bottom: 20px;
     letter-spacing: 1px;
     text-align: justify;
@@ -391,16 +393,17 @@ header .container .btnx-box .btnx {
     color: #838383;
     transition: color 0.3s;
 }
-.services .services-col .services-card:hover .title{
+
+.services .services-col .services-card:hover .title {
     color: var(--bg-color);
 }
 
-.services .services-col .services-card:hover .description{
-    
+.services .services-col .services-card:hover .description {
+
     color: #fff;
 }
 
-.services .services-col .services-card .content .learn-more{
+.services .services-col .services-card .content .learn-more {
     color: #f1f1f1;
     text-decoration: none;
     font-size: 18px;
@@ -409,7 +412,7 @@ header .container .btnx-box .btnx {
     transition: color 0.3s;
 }
 
-.services .services-col .services-card .content .learn-more::after{
+.services .services-col .services-card .content .learn-more::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -420,16 +423,16 @@ header .container .btnx-box .btnx {
     transition: background-color 0.3s;
 }
 
-.services .services-col .services-card:hover .learn-more::after{
+.services .services-col .services-card:hover .learn-more::after {
     background-color: var(--bg-color);
     transform: scaleX(10px);
 }
 
-.services .services-col .services-card .circle-before{
+.services .services-col .services-card .circle-before {
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(40%,-40%);
+    transform: translate(40%, -40%);
     width: 70px;
     height: 70px;
     background-color: var(--text-main-color);
@@ -437,7 +440,7 @@ header .container .btnx-box .btnx {
     transition: all 0.5s;
 }
 
-.services .services-col .services-card:hover .circle-before{
+.services .services-col .services-card:hover .circle-before {
     width: 100%;
     height: 100%;
     transform: none;
@@ -577,8 +580,8 @@ header .container .btnx-box .btnx {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 
@@ -635,13 +638,11 @@ input::-webkit-inner-spin-button {
     color: var(--main-color);
 }
 
-.footer .purple a{
+.footer .purple a {
     color: var(--text-main-color);
 }
 
-footer .developer a{
+footer .developer a {
     text-decoration: none;
     color: gray;
 }
-
-
